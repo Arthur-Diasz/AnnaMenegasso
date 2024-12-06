@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
         duration: window.innerWidth < 768 ? 800 : 1000,
         easing: "ease-in-out",
         once: false,
+        disable: function () {
+            return window.innerWidth < 768;
+        },
     });
 
     const testimonialsSwiper = new Swiper('.testimonials-swiper', {
